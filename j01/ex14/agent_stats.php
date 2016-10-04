@@ -21,8 +21,6 @@
             }
         }
     }
-
-    //print_r($data);
     ksort($data);
     $moyenne_user = array();
     $moyenne = 0;
@@ -60,7 +58,6 @@
         {
             if (array_key_exists('note_moulinette', $data[$name]))
             {
-                //var_dump($data[$name]['note_moulinette']);
                 $value -= intval($data[$name]['note_moulinette']);
                 echo "$name:$value\n";
             }
