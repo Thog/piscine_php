@@ -1,3 +1,4 @@
+#!/usr/bin/php
 <?php
 function is_sort($entry, $next_entry)
 {
