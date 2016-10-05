@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
-// Force timezone for date function
 
+// Force timezone for date function
 date_default_timezone_set('Europe/Paris');
 
 $file = fopen("/var/run/utmpx", "r");
