@@ -36,7 +36,8 @@ foreach ($head as $key => $value)
     foreach ($array as $v)
         if (isset($v[$index]))
             $tmp[trim($v[$index])] = trim($v[$key]);
-    $value = $tmp;
+    // Create a variable named with $value containing all data
+    $$value = $tmp;
 }
 
 // Commander part
