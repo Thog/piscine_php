@@ -53,7 +53,6 @@ function create_folder($url)
 function get_name($img)
 {
     preg_match("/^.*?([^\/]+)$/", $img, $matches);
-    print_r($img . $matches);
     if (substr($matches[1], -1) === "\"" || substr($matches[1], -1) === "'")
         return (substr($matches[1], 0, -1));
     return ($matches[1]);

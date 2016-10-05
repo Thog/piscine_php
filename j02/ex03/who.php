@@ -10,7 +10,7 @@ while ($utmpx = fread($file, 628))
     /*
     * Unpack data from binary
     * user: 256 bytes
-    * id: int 4 bytes
+    * id: 4 bytes
     * tty_name: 32 bytes
     * pid: 4 bytes
     * status_type: 2 bytes

@@ -11,10 +11,10 @@ if ($argc < 2 || !file_exists($argv[1]))
 	exit();
 
 // retrieve the page content
-$read = fopen($argv[1], 'r');
+$buffer = fopen($argv[1], 'r');
 $page = "";
-while ($read && !feof($read))
-    $page .= fgets($read);
+while ($buffer && !feof($buffer))
+    $page .= fgets($buffer);
 
 $page = preg_replace_callback("/(<a )(.*?)(>)(.*)(<\/a>)/si", function($matches)
 {
