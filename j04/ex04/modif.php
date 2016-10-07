@@ -1,7 +1,12 @@
 <?php
 
+function entry_exist($value)
+{
+    return ($_POST[$value] || $_POST[$value] === "0");
+}
+
 // Check if sended data are correct
-if ($_POST['login'] && $_POST['oldpw'] && $_POST['newpw'] && $_POST['submit'] && $_POST['submit'] === "OK")
+if (entry_exist('login') && entry_exist('oldpw') && entry_exist('newpw') && $_POST['submit'] && $_POST['submit'] === "OK")
 {
     // Unserialize the account database
     $account = unserialize(file_get_contents('../private/passwd'));

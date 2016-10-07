@@ -1,7 +1,12 @@
 <?php
 
+function entry_exist($value)
+{
+    return ($_POST[$value] || $_POST[$value] === "0");
+}
+
 // Check if sended data are correct
-if ($_POST['login'] && $_POST['passwd'] && $_POST['submit'] && $_POST['submit'] === "OK")
+if (entry_exist('login') && entry_exist('passwd') && $_POST['submit'] && $_POST['submit'] === "OK")
 {
     // Create the cache if it doesn't exit
     if (!file_exists('../private'))
