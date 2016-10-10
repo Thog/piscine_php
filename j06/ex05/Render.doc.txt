@@ -1,0 +1,20 @@
+<- Render ----------------------------------------------------------------------
+The Render class handles 4x4 Render.
+It have serveral pressets
+IDENTITY    = 'IDENTITY',
+SCALE       = 'SCALE',
+RX          = 'Ox ROTATION',
+RY          = 'Oy ROTATION',
+RZ          = 'Oz ROTATION',
+TRANSLATION = 'TRANSLATION',
+PROJECTION  = 'PROJECTION';
+
+On wich depends the following arguments respectivly :
+IDENTITY    ->nothing
+SCALE       -> the scale
+RX          -> angle of rotation
+RY          -> angle of rotation
+RZ          -> angle of rotation
+TRANSLATION -> vector ( class Vector ) of the translation
+PROJECTION  -> Field of view ( in degrees ), Ratio (width/height of screen), near and far z distances
+---------------------------------------------------------------------- Render ->

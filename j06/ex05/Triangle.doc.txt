@@ -1,0 +1,4 @@
+<- Triangle ----------------------------------------------------------------------
+The Triangle class handles 3x Vertex.
+The Triangle object is immutable.
+---------------------------------------------------------------------- Triangle ->
