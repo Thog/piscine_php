@@ -1,4 +1,5 @@
 <?php
+
 class Camera
 {
     static $verbose = false;
@@ -13,7 +14,8 @@ class Camera
     public function __construct($array)
     {
         $this->_origine = $array['origin'];
-        $this->_tT = new Matrix(array('preset' => Matrix::TRANSLATION, 'vtc' => $this->_origine->opposite()));
+        $opposite_vector = new Vector(array('dest' => new Vertex(array('x' => $this->_origine->getX() * -1, 'y' => $this->_origine->getY() * -1, 'z' => $this->_origine->getZ() * -1))));
+        $this->_tT = new Matrix(array('preset' => Matrix::TRANSLATION, 'vtc' => $opposite_vector));
         $this->_tR = $this->_transpose($array['orientation']);
         $this->_width = (float)$array['width'] / 2;
         $this->_height = (float)$array['height'] / 2;

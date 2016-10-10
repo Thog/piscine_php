@@ -1,0 +1,38 @@
+<- Vector ----------------------------------------------------------------------
+The Vector class handles space 3D Vectors.
+This class contains three coordinates and a homogenous parameter (always equal to 0)
+
+An instance is contructed from two Vertex orig and dest.
+It represents then the vector between thos two points.
+new Vector( array( 'dest' => $vertex_dest, 'orig' => $vertex_orig );
+If the vertex 'orig' is not precised, it will then be (0,0,0) as default.
+
+All Attributes are private, you can access them using the right getter.
+Those attributes are read only.
+
+The following method are providing for this Class:
+
+- magnitude() : give the norme of the instanced Vector.
+
+- normalize() : give the normalized Vector correspondig (a fresh copy
+if the instance was already normalized)
+
+- add( Vector $other ) : give the result of the addition between
+the current instance and $other.
+
+- sub( Vector $other ) : give the result of the substraction between
+the current instance and $other.
+
+- opposite() : return the opposite Vector;
+
+- scalarProduct( $k ) : return the product of the constant $k
+and the current instance;
+
+- dotProduct( Vector $other ) : return the scalar product of the current
+instance and $other.
+
+- cos( Vector $other ) : return the cosinus between the current instance and $v
+
+Vector crossProduct( Vector $other ) : return the cross product
+(right handed set) of the current instance and $v
+---------------------------------------------------------------------- Vector ->
