@@ -13,13 +13,13 @@ Any other use is undefined behaviour.
 
 The class provides the following methods :
 
-Color   add( Color $rhs );
+Color   add( Color $color );
 Adds each color constitutive and returns a new Color instance.
 
-Color   sub( Color $rhs );
+Color   sub( Color $color );
 Substracts each color constitutive and returns a new Color instance.
 
-Color   mult( $f );
-Multiplies each color constitutive by factor $f and returns a new Color
+Color   mult( $mult );
+Multiplies each color constitutive by factor $mult and returns a new Color
 instance.
 ---------------------------------------------------------------------- Color ->

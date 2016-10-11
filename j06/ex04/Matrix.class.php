@@ -155,16 +155,16 @@ class Matrix
             return "error";
     }
 
-    public function mult(Matrix $rhs)
+    public function mult(Matrix $other)
     {
         $tmp = array();
         for ($i = 0; $i < 16; $i += 4) {
             for ($j = 0; $j < 4; $j++) {
                 $tmp[$i + $j] = 0;
-                $tmp[$i + $j] += $this->matrix[$i + 0] * $rhs->matrix[$j + 0];
-                $tmp[$i + $j] += $this->matrix[$i + 1] * $rhs->matrix[$j + 4];
-                $tmp[$i + $j] += $this->matrix[$i + 2] * $rhs->matrix[$j + 8];
-                $tmp[$i + $j] += $this->matrix[$i + 3] * $rhs->matrix[$j + 12];
+                $tmp[$i + $j] += $this->matrix[$i + 0] * $other->matrix[$j + 0];
+                $tmp[$i + $j] += $this->matrix[$i + 1] * $other->matrix[$j + 4];
+                $tmp[$i + $j] += $this->matrix[$i + 2] * $other->matrix[$j + 8];
+                $tmp[$i + $j] += $this->matrix[$i + 3] * $other->matrix[$j + 12];
             }
         }
         $matrice = new Matrix();

@@ -23,7 +23,7 @@ Matrix object values are immutable.
 
 The following method are providing for this Class:
 
-- mult() : return a new matrix corresponding to the multiplication of the instance by the argument
+- mult($other) : return a new matrix corresponding to the multiplication of the instance and $other
 
-- transformVertex() : return a new Vertex corresponding to the matrix apply to the one sent in argument
+- transformVertex($vtx) : return a new Vertex corresponding to the matrix apply to $vtx
 ---------------------------------------------------------------------- Matrix ->

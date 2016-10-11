@@ -12,6 +12,5 @@ either send the ratio argument, or bot the width and height
 
 All this values possess getter and setter for your convinience.
 Only one method is implemented :
-- watchVertex: This method need a vertex in argument, the one wich is to be projected,
-and return the corresponding new vertex in the camera coordinate.
+- watchVertex($worldVertex) : project $worldVertex and return the corresponding new vertex in the camera coordinate.
 ---------------------------------------------------------------------- Camera ->
