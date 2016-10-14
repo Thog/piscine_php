@@ -18,7 +18,7 @@ $(document).ready(function()
     var tmp = document.cookie;
     if (tmp)
     {
-        cookie = JSON.parse(tmp);
+        cookie = jQuery.parseJSON(tmp);
         cookie.forEach(function (e) {
             addTodo(e);
         });
